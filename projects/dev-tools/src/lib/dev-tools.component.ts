@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'lib-dev-tools',
@@ -6,16 +7,23 @@ import { Component, OnInit } from '@angular/core';
     <p>
       dev-tools works!
     </p>
+    <button (click)="go()">go</button>
+    <button (click)="back()">back</button>
+    <router-outlet></router-outlet>
   `,
-  styles: [
-  ]
+  styles: []
 })
 export class DevToolsComponent implements OnInit {
-
-  constructor() { }
+  constructor(private router: Router, private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    console.log('devtools lib is alive!');
+    console.log(2);
   }
 
+  go() {
+    this.router.navigate(['products']);
+  }
+  back() {
+    this.router.navigate(['/']);
+  }
 }
