@@ -2,7 +2,7 @@ import * as NotificationActions from './notifications.actions';
 import { Notifications } from '../shared/notifications.model';
 
 const initialState = {
-  ingredients: [new Notifications('Apples', 5), new Notifications('Tomatoes', 10)]
+  notifications: [new Notifications('Testing title #1', 5), new Notifications('Testing title #2', 10)]
 };
 
 export function notificationsListReducer(
@@ -13,7 +13,7 @@ export function notificationsListReducer(
     case NotificationActions.ADD_NOTIFICATION:
       return {
         ...state,
-        ingredients: [...state.ingredients, action.payload]
+        ingredients: [...state.notifications, action.payload]
       };
     default:
       return state;
