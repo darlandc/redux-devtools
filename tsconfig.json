@@ -19,6 +19,10 @@
       "dev-tools": [
         "dist/dev-tools/dev-tools",
         "dist/dev-tools"
+      ],
+      "notifications": [
+        "dist/notifications/notifications",
+        "dist/notifications"
       ]
     }
   },

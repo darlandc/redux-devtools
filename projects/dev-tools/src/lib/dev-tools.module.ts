@@ -33,7 +33,7 @@ const routes: Routes = [
     //   maxAge: 25
     // }),
     // HttpClientInMemoryWebApiModule.forRoot(productData),
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot(routes,  { useHash: true, enableTracing: true }),
     StoreModule.forRoot({}, {})
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

@@ -1,3 +1,4 @@
+import { NotificationsModule } from './../../../notifications/src/lib/notifications.module';
 import { HomeComponent } from './components/home/home.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
@@ -14,7 +15,8 @@ import { DevToolsModule } from '../../../dev-tools/src/public-api';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DevToolsModule
+    // DevToolsModule
+    NotificationsModule
   ],
   providers: [],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],

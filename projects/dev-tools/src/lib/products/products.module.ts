@@ -8,17 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { ProductShellComponent } from './components/shell/product-shell.component';
 import { ProductListComponent } from './components/list/product-list.component';
-import { ProductEditComponent } from './components/edit/product-edit.component';
-
 
 const productRoutes: Routes = [
-  { path: '', component: ProductShellComponent },
-  { path: 'list', component: ProductListComponent },
-  { path: 'edit', component: ProductEditComponent },
+  { path: '/', component: ProductShellComponent },
+  { path: 'list', component: ProductListComponent }
 ];
 
 @NgModule({
-  declarations: [ProductEditComponent, ProductListComponent, ProductShellComponent],
+  declarations: [ProductListComponent, ProductShellComponent],
   imports: [
     BrowserModule,
     HttpClientModule,
@@ -29,7 +26,7 @@ const productRoutes: Routes = [
     // }),
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  exports:  [ProductEditComponent, ProductListComponent, ProductShellComponent]
+  exports:  [ProductListComponent, ProductShellComponent]
 })
 export class ProductsModule { }
 
